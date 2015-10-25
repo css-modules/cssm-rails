@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Test that the CSSM bundle works in the browser</title>
+  </head>
+  <body>
+    <script src="cssm.js"></script>
+    <script>
+      console.log("CSSM global object: ", CSSM)
+      var source = ".foo { color: red; }"
+      console.log("Source: ", source)
+      CSSM.compile(source, "inline.css").then(function(compiled) {
+        console.log("Compiled CSS: ", compiled.injectableSource)
+        console.log("Exported tokens: ", compiled.exportTokens)
+      })
+    </script>
+  </body>
+</html>
