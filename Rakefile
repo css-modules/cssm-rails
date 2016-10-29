@@ -11,6 +11,6 @@ task default: :test
 
 desc 'rebuild the vendored postcss-modules'
 task :vendor_build do
-  `cd vendor_build && npm install`
-  `cd vendor_build && npm run bundle`
+  `cd vendor/src && npm install`
+  `cd vendor/src && npm run bundle`
 end

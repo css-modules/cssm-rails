@@ -6,6 +6,6 @@
     "string-hash": "^1.1.0"
   },
   "scripts": {
-    "bundle": "browserify bundle.js -s postcss_modules -o ../vendor/bundle.js"
+    "bundle": "browserify index.js -s postcss_modules -o ../bundle.js"
   }
 }

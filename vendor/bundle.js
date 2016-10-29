@@ -5,16 +5,16 @@ var stringHash = require('string-hash')
 var genericNames = require('generic-names')
 
 module.exports = function(css, pathName) {
-  function generateScopedName(name, filename, css) {
-    const i           = css.indexOf(`.${ name }`);
-    const lineNumber  = css.substr(0, i).split(/[\r\n]/).length;
-    const hash        = stringHash(css).toString(36).substr(0, 5);
+  // function generateScopedName(name, filename, css) {
+  //   const i           = css.indexOf(`.${ name }`);
+  //   const lineNumber  = css.substr(0, i).split(/[\r\n]/).length;
+  //   const hash        = stringHash(css).toString(36).substr(0, 5);
+  //
+  //   return `_${ name }_${ hash }_${ lineNumber }`;
+  // }
 
-    return `_${ name }_${ hash }_${ lineNumber }`;
-  }
-
-  Core.scope.generateScopedName =  genericNames("[name]_[local]_[hash:base64:5]", { context: process.cwd() })
   // Core.scope.generateScopedName = generateScopedName
+  Core.scope.generateScopedName =  genericNames("[name]_[local]_[hash:base64:5]", { context: process.cwd() })
 
   var core = new Core()
 
@@ -16617,7 +16617,7 @@ module.exports={
         "spec": ">=6.0.0 <7.0.0",
         "type": "range"
       },
-      "/Users/tomascelizna/Work/Code/gems/cssm-rails/vendor_build/node_modules/browserify-sign"
+      "/Users/tomascelizna/Work/Code/gems/cssm-rails/vendor/src/node_modules/browserify-sign"
     ]
   ],
   "_from": "elliptic@>=6.0.0 <7.0.0",
@@ -16652,7 +16652,7 @@ module.exports={
   "_shasum": "e4c81e0829cf0a65ab70e998b8232723b5c1bc48",
   "_shrinkwrap": null,
   "_spec": "elliptic@^6.0.0",
-  "_where": "/Users/tomascelizna/Work/Code/gems/cssm-rails/vendor_build/node_modules/browserify-sign",
+  "_where": "/Users/tomascelizna/Work/Code/gems/cssm-rails/vendor/src/node_modules/browserify-sign",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
