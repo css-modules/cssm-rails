@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "browserify": "11.2.0",
-    "css-modules-loader-core": "1.0.0"
-  },
-  "scripts": {
-    "bundle": "browserify cssm.js -o ../vendor/cssm.js"
-  }
-}

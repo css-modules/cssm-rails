@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "browserify": "11.2.0",
+    "generic-names": "1.0.2",
+    "css-modules-loader-core": "^1.0.1",
+    "string-hash": "^1.1.0"
+  },
+  "scripts": {
+    "bundle": "browserify bundle.js -s postcss_modules -o ../vendor/bundle.js"
+  }
+}
