@@ -1,15 +1,7 @@
 module CSSMRails
-  class Result
-    attr_reader :css
-    attr_reader :map
-
-    def initialize(css, map)
-      @css = css
-      @map = map
-    end
-
+  class Result < Struct.new(:injectable_source, :export_tokens)
     def to_s
-      @css
+      injectable_source
     end
   end
 end

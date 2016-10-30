@@ -2,15 +2,15 @@ require 'test_helper'
 
 describe CSSMRails do
   let(:dir) { Pathname(__FILE__).dirname }
-  let(:css) { dir.join('samples/test.scss').read }
+  let(:filename) { 'test.scss' }
+  let(:css) { dir.join("samples/#{filename}").read }
 
   it 'process CSS' do
     CSSMRails.process(css).must_be_kind_of CSSMRails::Result
   end
 
   it "process CSS" do
-    css = ".title { color: red; }"
-    result = CSSMRails.process(css)
-    result.css.must_equal 'foo'
+    result = CSSMRails.process(css, from: filename)
+    result.injectable_source.must_equal ".test_title_25Esx { color: red; }\n"
   end
 end
