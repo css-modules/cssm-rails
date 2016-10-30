@@ -11,11 +11,12 @@ describe CSSMRails do
 
   it 'process CSS' do
     result = CSSMRails.process(css, from: filename)
-    result.injectable_source.must_equal ".test_title_199rY { color: red; }\n"
+    result.injectable_source.must_include ".test_background_333RR {\n  background: yellow;\n}\n"
+    result.injectable_source.must_include ".test_title_199rY {\n  color: red;\n}\n"
   end
 
   it 'generates export tokens' do
     result = CSSMRails.process(css, from: filename)
-    result.export_tokens.must_equal('title' => 'test_title_199rY')
+    result.export_tokens.must_equal('background' => 'test_background_333RR', 'title' => 'test_title_199rY test_background_333RR')
   end
 end

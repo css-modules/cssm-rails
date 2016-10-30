@@ -1,1 +1,8 @@
-.title { color: red; }
+.background {
+  background: yellow;
+}
+
+.title {
+  composes: background;
+  color: red;
+}
