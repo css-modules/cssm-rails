@@ -8,7 +8,10 @@
     <script src="bundle.js"></script>
     <script>
       var source = ".title { color: red; }"
-      postcss_modules(source, 'inline.css').then(function(res) { console.log(res); });
+      var run = function(source, filename){
+        postcss_modules(source, filename).then(function(res) { console.log(res); });
+      }
+      run.apply(this, [source, 'inline.css'])
     </script>
   </body>
 </html>

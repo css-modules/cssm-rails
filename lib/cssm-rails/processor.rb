@@ -1,9 +1,11 @@
-require 'pathname'
+# require 'pathname'
 require 'execjs/async'
-require 'json'
+# require 'execjs'
+# require 'json'
 
 module CSSMRails
   class Processor
+
     def initialize(params = {})
       @params = params || {}
     end
@@ -14,10 +16,14 @@ module CSSMRails
     # * `from` with input CSS file name. Will be used in error messages.
     # * `to` with output CSS file name.
     # * `map` with true to generate new source map or with previous map.
-    def process(css, _opts = {})
-      result = runtime.call('process', css, 'inline.css')
+    def process(css, opts = {})
+      # p '---', runtime
+      result = runtime.call('run', css, 'inline.css')
+      # result = runtime.eval("postcss_modules")
 
-      Result.new(result['css'], result['map'])
+      p '---', result
+
+      # Result.new(result['css'], result['map'])
     end
 
     private
@@ -79,20 +85,47 @@ module CSSMRails
     # end
 
     def runtime
-      @runtime ||= ExecJS.compile(build_js)
+      # @runtime ||= ExecJS.compile(build_js)
+      @runtime ||= ExecJS.compile_async(build_js)
+
+      # original_runtime = ExecJS.runtime
+
+      # ExecJS.runtime = ExecJS::ExternalRuntime.new(
+      #   name: "Node.js (V8)",
+      #   command:     ["nodejs", "node"],
+      #   runner_path: File.join(File.dirname(__FILE__), '../execjs/support/node_async_runner.js'),
+      #   encoding:    'UTF-8'
+      # )
+
+      # @runtime ||= ExecJS.compile <<-JAVASCRIPT
+      #   var run = function(html, code) {
+      #     callback('x');
+      #   }
+      # JAVASCRIPT
+
+      # @runtime ||= ExecJS.compile(build_js)
+
+      # ExecJS.runtime = original_runtime
     end
 
     def read_js
-      @@js ||= Pathname(File.dirname(__FILE__)).join('../../vendor/cssm.js').read
+      @@js ||= Pathname(File.dirname(__FILE__)).join('../../vendor/bundle.js').read
     end
 
+    GLOBAL_WRAPPER = <<-JS
+      var global = global || this;
+      var self = self || this;
+      var window = window || this;
+    JS
+
     def build_js
-      ['var global = this', read_js, process_proxy].join(';')
+      [GLOBAL_WRAPPER, read_js, process_proxy].join(';')
     end
 
     def process_proxy
       <<-JS
-        function process(source, filename) {
+        var run = function(source, filename) {
+          postcss_modules(source, 'inline.css').then(function(res) { callback(res) });
         }
       JS
     end
