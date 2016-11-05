@@ -22,7 +22,13 @@ Gem::Specification.new do |spec|
   # spec.add_dependency 'execjs', '~> 2.7.0'
   spec.add_dependency 'execjs', '~> 2.0.0'
 
+  spec.add_dependency 'rails'
+  spec.add_dependency 'sass'
+  spec.add_dependency 'sprockets'
+
   spec.add_development_dependency 'bundler', '~> 1.10'
   spec.add_development_dependency 'minitest', '~> 5.0'
+  spec.add_development_dependency 'minitest-rails'
+  spec.add_development_dependency 'minitest-rails-capybara'
   spec.add_development_dependency 'rake', '~> 10.0'
 end

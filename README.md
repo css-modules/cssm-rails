@@ -27,10 +27,10 @@ Put foo.cssm in your app/assets/stylesheets directory with `.bar { color: red; }
 ## TODO
 
 * Upgrade to ExecJS 2.7 – needs to be patched to run async code
-* pre-process sass, scss, css via Sprockets
+* test pre-process sass, scss, css via Sprockets
 * add view helper `cssm "event:title"` (the view helper should be then used via erb in JS)
 * add configuration that can be environment specific (format of the generated class name)
-* test performance both in production and staging
+* test performance in production (add cache?)
 
 ## Development
 

@@ -22,7 +22,10 @@ end
 
 require_relative 'cssm-rails/processor'
 require_relative 'cssm-rails/result'
+require_relative 'cssm-rails/view_helper'
+
 require_relative 'cssm-rails/railtie' if defined?(Rails)
+
 require_relative 'cssm-rails/version'
 
 ExecJS.runtime = ExecJS::Runtimes::Node

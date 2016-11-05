@@ -13,7 +13,7 @@ module CSSMRails
     end
 
     def self.run(filename, css)
-      output = filename.chomp(File.extname(filename)) + '.scssm'
+      output = filename.chomp(File.extname(filename)) + '.scss'
       result = @processor.process(css, from: filename, to: output)
 
       result.to_s

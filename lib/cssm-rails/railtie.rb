@@ -3,6 +3,10 @@ require 'yaml'
 begin
   module CSSMRails
     class Railtie < ::Rails::Railtie
+      initializer :cssm_rails_view_helpers do
+        ActionView::Base.send :include, CSSMRails::ViewHelper
+      end
+
       if config.respond_to?(:assets) && !config.assets.nil?
         config.assets.configure do |env|
           CSSMRails.install(env, {})
