@@ -31,8 +31,8 @@ $ gem install cssm-rails
 
 ### Javascript
 
-```jsx
-# my.js.erb
+```js
+// my.js.erb
 
 $(".<%= cssm("foo:bar") %>")
 ```
