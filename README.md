@@ -1,6 +1,6 @@
 # CSS Modules for Rails
 
-[![Build Status](https://travis-ci.org/tomasc/cssm-rails.svg)](https://travis-ci.org/tomasc/cssm-rails) [![Gem Version](https://badge.fury.io/rb/cssm-rails.svg)](http://badge.fury.io/rb/cssm-rails) 
+[![Build Status](https://travis-ci.org/tomasc/cssm-rails.svg)](https://travis-ci.org/tomasc/cssm-rails) [![Gem Version](https://badge.fury.io/rb/cssm-rails.svg)](http://badge.fury.io/rb/cssm-rails)
 
 ## Installation
 
@@ -24,13 +24,29 @@ $ gem install cssm-rails
 
 ## Usage
 
-Put foo.cssm in your app/assets/stylesheets directory with `.bar { color: red; }`. Use `<div class="<%= cssm "foo:bar" %>">` in your views. `//= require cssm` in then `CSSM.foo.bar` to use from javascript.
+### Stylesheets
+
+```css
+```
+
+### Javascript
+
+```jsx
+# my_js.coffee.erb
+
+$(".<%= cssm("foo:bar") %>")
+```
+
+### Views
+
+```erb
+<p class='<%= cssm "foo:bar" %>'>paragraph</p>
+```
 
 ## TODO
 
 * Upgrade to ExecJS 2.7 – needs to be patched to run async code
-* test pre-process sass, scss, css via Sprockets
-* add view helper `cssm "event:title"` (the view helper should be then used via erb in JS)
+* test pre-process sass, scss, css via Sprockets (or .sass.m, .scss.m, .css.m ?)
 * add configuration that can be environment specific (format of the generated class name)
 * test performance in production (add cache?)
 
