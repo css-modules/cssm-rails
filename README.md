@@ -34,13 +34,13 @@ $ gem install cssm-rails
 ```js
 // my.js.erb
 
-$(".<%= cssm('foo:bar') %>")
+$(".<%= cssm 'foo:bar' %>")
 ```
 
 ### Views
 
 ```erb
-<p class='<%= cssm "foo:bar" %>'>paragraph</p>
+<p class="<%= cssm 'foo:bar' %>">paragraph</p>
 ```
 
 ## Development
