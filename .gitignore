@@ -3,3 +3,4 @@
 /doc/
 /pkg/
 /tmp/
+*.log

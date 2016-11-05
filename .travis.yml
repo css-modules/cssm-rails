@@ -1,0 +1,13 @@
+sudo: false
+language: ruby
+script: 'bundle exec rake'
+rvm:
+  - 2.2.5
+before_install:
+  - gem install bundler -v 1.12.5
+notifications:
+  email:
+    recipients:
+      - tomas.celizna@gmail.com
+    on_failure: change
+    on_success: never

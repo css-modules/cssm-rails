@@ -43,14 +43,6 @@ $(".<%= cssm("foo:bar") %>")
 <p class='<%= cssm "foo:bar" %>'>paragraph</p>
 ```
 
-## TODO
-
-* Upgrade to ExecJS 2.7 – needs to be patched to run async code
-* add `pathFetcher` to allow `compose` across files
-* test pre-process sass, scss, css via Sprockets (or .sass.m, .scss.m, .css.m ?)
-* add configuration that can be environment specific (format of the generated class name)
-* test performance in production (add cache?)
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
