@@ -10,15 +10,27 @@ gem 'cssm-rails'
 
 And then execute:
 
-    $ bundle
+```sh
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install cssm-rails
+```sh
+$ gem install cssm-rails
+```
 
 ## Usage
 
 Put foo.cssm in your app/assets/stylesheets directory with `.bar { color: red; }`. Use `<div class="<%= cssm "foo:bar" %>">` in your views. `//= require cssm` in then `CSSM.foo.bar` to use from javascript.
+
+## TODO
+
+* Upgrade to ExecJS 2.7 – needs to be patched to run async code
+* pre-process sass, scss, css via Sprockets
+* add view helper `cssm "event:title"` (the view helper should be then used via erb in JS)
+* add configuration that can be environment specific (format of the generated class name)
+* test performance both in production and staging
 
 ## Development
 
@@ -33,4 +45,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/css-mo
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-

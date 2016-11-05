@@ -14,15 +14,6 @@ begin
           end
         end
       end
-
-      # # Read browsers requirements from application config
-      # def config(root)
-      #   file   = File.join(root, 'config/autoprefixer.yml')
-      #   params = ::YAML.load_file(file) if File.exist?(file)
-      #   params ||= {}
-      #   params = params.symbolize_keys
-      #   params
-      # end
     end
   end
 rescue LoadError

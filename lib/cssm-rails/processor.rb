@@ -27,7 +27,6 @@ module CSSMRails
       # )
       #
       # @runtime ||= ExecJS.compile(build_js)
-
     end
 
     def read_js
