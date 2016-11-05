@@ -1,5 +1,7 @@
 # CSS Modules for Rails
 
+[![Build Status](https://travis-ci.org/tomasc/cssm-rails.svg)](https://travis-ci.org/tomasc/cssm-rails) [![Gem Version](https://badge.fury.io/rb/cssm-rails.svg)](http://badge.fury.io/rb/cssm-rails) 
+
 ## Installation
 
 Add this line to your application's Gemfile:
