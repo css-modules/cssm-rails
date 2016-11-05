@@ -27,6 +27,7 @@ $ gem install cssm-rails
 ### Stylesheets
 
 ```css
+/*  */
 ```
 
 ### Javascript
@@ -35,6 +36,10 @@ $ gem install cssm-rails
 // my.js.erb
 
 $(".<%= cssm 'foo:bar' %>")
+
+// or maybe better
+// cssm(:foo, :bar) ?
+// cssm('path/to/foo', 'bar') ?
 ```
 
 ### Views
