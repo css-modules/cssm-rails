@@ -22,13 +22,13 @@ module.exports = function(css, pathName) {
       console.error('no sourcePath', dir, file);
     }
 
-    return new Promise((resolve, reject) => {
+    return new Promise(function(resolve, reject) {
       var _cached = cached[sourcePath];
       if (_cached) {
         return resolve(_cached.exportTokens);
       }
 
-      fs.readFile(sourcePath, 'utf-8', (error, sourceString) => {
+      fs.readFile(sourcePath, 'utf-8', function(error, sourceString) {
         if (error) { return reject(error); }
         core
           .load(sourceString, "common.css", ++trace, pathFetcher)
