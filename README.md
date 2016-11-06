@@ -22,6 +22,11 @@ Or install it yourself as:
 $ gem install cssm-rails
 ```
 
+## Requirements
+
+This gem requires Node to be installed.
+(Patches to ExecJS for support of async JS eval in other runtimes are welcome.)
+
 ## Usage
 
 ### Stylesheets

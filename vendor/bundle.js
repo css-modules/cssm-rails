@@ -1,24 +1,39 @@
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.postcss_modules = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function (process){
 var Core = require('css-modules-loader-core');
-var stringHash = require('string-hash')
 var genericNames = require('generic-names')
-// var FileSystemLoader = require('css-modules-loader-core/lib/file-system-loader');
+// var fs = require('fs');
 
 module.exports = function(css, pathName) {
   // TODO: the template shuold be configurable
   var template = "[name]_[local]_[hash:base64:5]"
   Core.scope.generateScopedName = genericNames(template, { context: process.cwd() })
 
+  var trace = 0;
   var core = new Core()
-  
-  // TODO: provide proper pathFetcher
-  var dummyPathFetcher = function () { return {} }
-  return core.load(css, pathName, dummyPathFetcher)
+  function pathFetcher(file, relativeTo, depTrace) {
+    // return new Promise((resolve, reject) => {
+    //   resolve({});
+    // });
+    // var sourcePath = '/Users/tomascelizna/Work/Code/gems/cssm-rails/test/samples/common.css';
+    return new Promise((resolve, reject) => {
+      // readFile(sourcePath, 'utf-8', (error, sourceString) => {
+        core
+          .load(".bold { font-weight: bold; }", "common.css", ++trace, pathFetcher)
+          .then(result => {
+            resolve(result.exportTokens);
+            // resolve('foo bar');
+          })
+          .catch(reject);
+      });
+    // });
+  }
+
+  return core.load(css, pathName, trace, pathFetcher)
 }
 
 }).call(this,require('_process'))
-},{"_process":162,"css-modules-loader-core":58,"generic-names":97,"string-hash":198}],2:[function(require,module,exports){
+},{"_process":162,"css-modules-loader-core":58,"generic-names":97}],2:[function(require,module,exports){
 var asn1 = exports;
 
 asn1.bignum = require('bn.js');
@@ -92,7 +107,7 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
   return this._getEncoder(enc).encode(data, reporter);
 };
 
-},{"../asn1":2,"inherits":107,"vm":205}],4:[function(require,module,exports){
+},{"../asn1":2,"inherits":107,"vm":204}],4:[function(require,module,exports){
 var inherits = require('inherits');
 var Reporter = require('../base').Reporter;
 var Buffer = require('buffer').Buffer;
@@ -10008,7 +10023,7 @@ CipherBase.prototype._toString = function (value, enc, fin) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48,"inherits":107,"stream":197,"string_decoder":199}],51:[function(require,module,exports){
+},{"buffer":48,"inherits":107,"stream":197,"string_decoder":198}],51:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -19730,7 +19745,7 @@ module.exports = function createGenerator(pattern, options) {
   };
 };
 
-},{"loader-utils":111,"path":119,"util":204}],98:[function(require,module,exports){
+},{"loader-utils":111,"path":119,"util":203}],98:[function(require,module,exports){
 var hash = exports;
 
 hash.utils = require('./hash/utils');
@@ -25335,7 +25350,7 @@ exports.default = CssSyntaxError;
 module.exports = exports['default'];
 
 
-},{"./warn-once":148,"supports-color":200}],130:[function(require,module,exports){
+},{"./warn-once":148,"supports-color":199}],130:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -34247,7 +34262,7 @@ function indexOf(xs, x) {
   return -1;
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":171,"./internal/streams/BufferList":176,"_process":162,"buffer":48,"buffer-shims":46,"core-util-is":51,"events":94,"inherits":107,"isarray":177,"process-nextick-args":161,"string_decoder/":199,"util":20}],174:[function(require,module,exports){
+},{"./_stream_duplex":171,"./internal/streams/BufferList":176,"_process":162,"buffer":48,"buffer-shims":46,"core-util-is":51,"events":94,"inherits":107,"isarray":177,"process-nextick-args":161,"string_decoder/":198,"util":20}],174:[function(require,module,exports){
 // a transform stream is a readable/writable stream where you do
 // something with the data.  Sometimes it's called a "filter",
 // but that's not a great name for it, since that implies a thing where
@@ -34957,7 +34972,7 @@ function CorkedRequest(state) {
   };
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":171,"_process":162,"buffer":48,"buffer-shims":46,"core-util-is":51,"events":94,"inherits":107,"process-nextick-args":161,"util-deprecate":201}],176:[function(require,module,exports){
+},{"./_stream_duplex":171,"_process":162,"buffer":48,"buffer-shims":46,"core-util-is":51,"events":94,"inherits":107,"process-nextick-args":161,"util-deprecate":200}],176:[function(require,module,exports){
 'use strict';
 
 var Buffer = require('buffer').Buffer;
@@ -39389,20 +39404,6 @@ Stream.prototype.pipe = function(dest, options) {
 };
 
 },{"events":94,"inherits":107,"readable-stream/duplex.js":170,"readable-stream/passthrough.js":178,"readable-stream/readable.js":179,"readable-stream/transform.js":180,"readable-stream/writable.js":181}],198:[function(require,module,exports){
-module.exports = function(str) {
-  var hash = 5381,
-      i    = str.length
-
-  while(i)
-    hash = (hash * 33) ^ str.charCodeAt(--i)
-
-  /* JavaScript does bitwise operations (like XOR, above) on 32-bit signed
-   * integers. Since we want the results to be always positive, if the high bit
-   * is set, unset it and add it back in through (64-bit IEEE) addition. */
-  return hash >= 0 ? hash : (hash & 0x7FFFFFFF) + 0x80000000
-}
-
-},{}],199:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -39625,11 +39626,11 @@ function base64DetectIncompleteChar(buffer) {
   this.charLength = this.charReceived ? 3 : 0;
 }
 
-},{"buffer":48}],200:[function(require,module,exports){
+},{"buffer":48}],199:[function(require,module,exports){
 'use strict';
 module.exports = false;
 
-},{}],201:[function(require,module,exports){
+},{}],200:[function(require,module,exports){
 (function (global){
 
 /**
@@ -39700,16 +39701,16 @@ function config (name) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],202:[function(require,module,exports){
+},{}],201:[function(require,module,exports){
 arguments[4][107][0].apply(exports,arguments)
-},{"dup":107}],203:[function(require,module,exports){
+},{"dup":107}],202:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],204:[function(require,module,exports){
+},{}],203:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -40299,7 +40300,7 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":203,"_process":162,"inherits":202}],205:[function(require,module,exports){
+},{"./support/isBuffer":202,"_process":162,"inherits":201}],204:[function(require,module,exports){
 var indexOf = require('indexof');
 
 var Object_keys = function (obj) {

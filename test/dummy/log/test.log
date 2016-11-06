@@ -297,3 +297,363 @@ Processing by PagesController#show as HTML
   Rendering pages/show.html.erb within layouts/application
   Rendered pages/show.html.erb within layouts/application (876.4ms)
 Completed 200 OK in 893ms (Views: 890.1ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 10:24:10 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (854.1ms)
+Completed 200 OK in 876ms (Views: 872.5ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 10:24:37 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (868.2ms)
+Completed 200 OK in 884ms (Views: 881.3ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 10:24:56 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (805.5ms)
+Completed 200 OK in 822ms (Views: 818.8ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 10:25:08 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (750.7ms)
+Completed 200 OK in 765ms (Views: 763.4ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 10:25:16 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (770.3ms)
+Completed 200 OK in 785ms (Views: 782.5ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 10:26:09 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (791.4ms)
+Completed 200 OK in 807ms (Views: 804.1ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 10:46:05 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (924.8ms)
+Completed 200 OK in 946ms (Views: 942.1ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:00:43 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (859.1ms)
+Completed 200 OK in 878ms (Views: 875.5ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:01:55 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (934.1ms)
+Completed 200 OK in 956ms (Views: 953.8ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:04:57 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (857.6ms)
+Completed 200 OK in 879ms (Views: 876.1ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:05:19 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (822.9ms)
+Completed 200 OK in 839ms (Views: 836.5ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:08:13 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (971.9ms)
+Completed 200 OK in 990ms (Views: 987.6ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:08:36 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (854.4ms)
+Completed 200 OK in 871ms (Views: 868.5ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:09:34 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (861.8ms)
+Completed 200 OK in 879ms (Views: 876.6ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:10:12 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (823.3ms)
+Completed 200 OK in 840ms (Views: 838.0ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:10:59 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (816.8ms)
+Completed 200 OK in 833ms (Views: 830.8ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:11:28 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (851.0ms)
+Completed 200 OK in 865ms (Views: 862.7ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:15:59 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (842.3ms)
+Completed 200 OK in 858ms (Views: 855.8ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:16:54 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (830.5ms)
+Completed 200 OK in 844ms (Views: 842.3ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:17:23 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (838.2ms)
+Completed 500 Internal Server Error in 851ms
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:18:26 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (898.2ms)
+Completed 200 OK in 915ms (Views: 912.5ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:20:29 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (797.9ms)
+Completed 200 OK in 813ms (Views: 810.2ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:22:42 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (829.7ms)
+Completed 200 OK in 843ms (Views: 841.0ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:23:59 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (846.6ms)
+Completed 200 OK in 861ms (Views: 858.5ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:24:52 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (814.6ms)
+Completed 200 OK in 833ms (Views: 829.5ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:26:07 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (877.4ms)
+Completed 200 OK in 894ms (Views: 890.8ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:26:59 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (836.6ms)
+Completed 200 OK in 853ms (Views: 849.5ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:28:07 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (882.9ms)
+Completed 200 OK in 899ms (Views: 896.4ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:29:45 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (834.4ms)
+Completed 200 OK in 848ms (Views: 845.8ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:30:54 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (845.4ms)
+Completed 200 OK in 861ms (Views: 858.5ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:33:47 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (802.7ms)
+Completed 200 OK in 817ms (Views: 814.7ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:36:08 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (872.8ms)
+Completed 200 OK in 887ms (Views: 885.2ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:36:59 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (797.5ms)
+Completed 200 OK in 813ms (Views: 811.0ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:39:28 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (799.5ms)
+Completed 200 OK in 815ms (Views: 812.3ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:39:54 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (885.8ms)
+Completed 200 OK in 901ms (Views: 899.2ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:40:42 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (891.2ms)
+Completed 200 OK in 906ms (Views: 903.7ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:42:24 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (796.5ms)
+Completed 200 OK in 811ms (Views: 808.5ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:43:31 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (827.5ms)
+Completed 200 OK in 843ms (Views: 840.4ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:44:13 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (864.1ms)
+Completed 200 OK in 878ms (Views: 876.4ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:44:25 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (845.1ms)
+Completed 200 OK in 860ms (Views: 857.0ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:45:01 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (794.4ms)
+Completed 200 OK in 809ms (Views: 807.1ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:45:52 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (832.6ms)
+Completed 200 OK in 848ms (Views: 845.6ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:46:25 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (1025.0ms)
+Completed 200 OK in 1040ms (Views: 1037.3ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:48:52 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (1054.5ms)
+Completed 200 OK in 1073ms (Views: 1070.3ms)
+--------------------------------------------------
+CSSMRails::ViewHelper::capybara::#cssm: test_0001_
+--------------------------------------------------
+Started GET "/page" for 127.0.0.1 at 2016-11-06 11:49:57 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (881.4ms)
+Completed 200 OK in 901ms (Views: 898.1ms)
