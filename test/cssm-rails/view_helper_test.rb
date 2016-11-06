@@ -6,6 +6,6 @@ describe CSSMRails::ViewHelper, :capybara do
   end
 
   describe '#cssm' do
-    it { page.must_have_selector '.event_title_2R9wz' }
+    it { page.must_have_selector '.event_title_2gKUC' }
   end
 end

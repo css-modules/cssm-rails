@@ -43,8 +43,9 @@ module.exports = function(css, pathName) {
   return core.load(css, pathName, ++trace, pathFetcher)
 }
 
-module.exports('.background { composes: bold from "./common.css"; background: yellow; }', '/Users/tomascelizna/Work/Code/gems/cssm-rails/test/samples/test.scss').then(
+var args = process.argv.slice(2);
+module.exports(args[0], args[1]).then(
   function(result) {
-    console.log(result);
+    process.stdout.write(JSON.stringify(result))
   }
 )
