@@ -39,17 +39,13 @@ This gem requires Node to be installed.
 ```js
 // my.js.erb
 
-$(".<%= cssm 'foo:bar' %>")
-
-// or maybe better
-// cssm(:foo, :bar) ?
-// cssm('path/to/foo', 'bar') ?
+$(".<%= cssm 'foo', 'bar' %>")
 ```
 
 ### Views
 
 ```erb
-<p class="<%= cssm 'foo:bar' %>">paragraph</p>
+<p class="<%= cssm 'foo', 'bar' %>">paragraph</p>
 ```
 
 ## Development
