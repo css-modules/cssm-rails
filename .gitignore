@@ -3,4 +3,5 @@
 /doc/
 /pkg/
 /tmp/
+node_modules
 *.log

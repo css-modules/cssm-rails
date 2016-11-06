@@ -13,4 +13,11 @@ desc 'rebuild the vendored postcss-modules'
 task :vendor_build do
   `cd vendor/src && npm install`
   `cd vendor/src && npm run bundle`
+
+  # re-enable the fs module (which would be removed by browserify if uncommented)
+  bundle = File.join(__dir__, 'vendor/bundle.js')
+  content = File.read(bundle).gsub("// var fs = require('fs');", "var fs = require('fs');")
+  File.open(bundle, 'w+') do |output_file|
+    output_file.write(content)
+  end
 end

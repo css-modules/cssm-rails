@@ -17,7 +17,6 @@ module CSSMRails
 
     def runtime
       @runtime ||= ExecJS.compile_async(build_js)
-
       # ready for ExecJS 2.7
       # ExecJS.runtime = ExecJS::ExternalRuntime.new(
       #   name: "Node.js (V8)",
