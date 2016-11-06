@@ -7,7 +7,7 @@ var glob = require('glob');
 var cached = {};
 
 module.exports = function(css, pathName) {
-  // TODO: the template shuold be configurable
+  // TODO: the template should be configurable
   var template = "[name]_[local]_[hash:base64:5]"
   Core.scope.generateScopedName = genericNames(template, { context: process.cwd() })
 
@@ -16,8 +16,8 @@ module.exports = function(css, pathName) {
 
   function pathFetcher(file, relativeTo, depTrace) {
     file = file.replace(/^["']|["']$/g, "")
-    let dir = path.dirname(relativeTo)
-    let sourcePath = glob.sync(path.join(dir, file))[0]
+    var dir = path.dirname(relativeTo)
+    var sourcePath = glob.sync(path.join(dir, file))[0]
     if (!sourcePath) {
       console.error('no sourcePath', dir, file);
     }
