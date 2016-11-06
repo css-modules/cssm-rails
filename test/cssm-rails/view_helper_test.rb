@@ -1,11 +1,17 @@
 require 'test_helper'
 
 describe CSSMRails::ViewHelper, :capybara do
+  include CSSMRails::ViewHelper
+
   before do
     visit page_path
   end
 
-  describe '#cssm' do
-    it { page.must_have_selector '.event_title_2gKUC' }
+  describe '.scssm' do
+    it { page.must_have_selector '.'+cssm('event', :title) }
+  end
+
+  describe '.css' do
+    it { page.wont_have_selector 'p[class^="default_default"]' }
   end
 end

@@ -13,14 +13,13 @@ module CSSMRails
     end
 
     def self.run(filename, css)
-      output = filename.chomp(File.extname(filename)) + '.scss'
-      result = @processor.process(css, from: filename, to: output)
-
+      result = @processor.process(css, from: filename)
       result.to_s
     end
 
     def self.install(env)
-      # env.register_mime_type('text/cssm', extensions: %w(.scssm .scss.m))
+      # env.register_mime_type('text/css', extensions: %w(.scssm .scss.m))
+
       if ::Sprockets::VERSION.to_f < 4
         env.register_postprocessor('text/css', ::CSSMRails::Sprockets)
       else
