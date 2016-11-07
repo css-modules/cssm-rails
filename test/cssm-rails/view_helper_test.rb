@@ -8,10 +8,11 @@ describe CSSMRails::ViewHelper, :capybara do
   end
 
   describe '.scssm' do
-    it { page.must_have_selector cssms('event', :title) }
+    it { page.must_have_selector cssms('event', 'title') }
   end
 
   describe '.css' do
-    it { page.wont_have_selector 'p[class^="default_default"]' }
+    it { page.must_have_selector '.default' }
+    it { page.must_have_selector cssms('default', 'default') }
   end
 end

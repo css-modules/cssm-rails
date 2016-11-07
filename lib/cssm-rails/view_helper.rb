@@ -4,7 +4,7 @@ module CSSMRails
       # TODO: shall we calculate digest of that file?
       # Rails.cache.fetch(['cssm-rails', asset_name, cls].map(&:to_s).join('-')) do
       path = find_asset(asset_name)
-      CSSMRails.process(File.read(path), from: path).export_tokens[cls.to_s]
+      CSSMRails.process(File.read(path), from: path).export_tokens[cls.to_s] || cls
       # end
     end
 

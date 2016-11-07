@@ -1,1 +1,3 @@
-:local(.bold) { font-weight: bold; }
+:local(.bold) {
+  font-weight: bold;
+}
