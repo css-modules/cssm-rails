@@ -30,7 +30,7 @@ module.exports = function(css, pathName) {
       fs.readFile(sourcePath, 'utf-8', function(error, sourceString) {
         if (error) { return reject(error); }
         core
-          .load(sourceString, "common.css", ++trace, pathFetcher)
+          .load(sourceString, sourcePath, ++trace, pathFetcher)
           .then(function(result) {
             cached[sourcePath] = result;
             resolve(result.exportTokens);
