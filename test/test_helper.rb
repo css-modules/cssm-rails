@@ -9,6 +9,8 @@ require 'minitest/autorun'
 require 'minitest/spec'
 require 'minitest/rails/capybara'
 
-require 'cssm-rails'
+require 'cssm/rails'
 
-require_relative '../lib/cssm-rails'
+# require_relative '../lib/cssm/rails'
+
+SAMPLE_DIR = File.join(__dir__, 'samples')

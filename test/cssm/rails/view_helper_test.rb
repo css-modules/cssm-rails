@@ -1,7 +1,7 @@
 require 'test_helper'
 
-describe CSSMRails::ViewHelper, :capybara do
-  include CSSMRails::ViewHelper
+describe CSSM::Rails::ViewHelper, :capybara do
+  include CSSM::Rails::ViewHelper
 
   before do
     visit page_path

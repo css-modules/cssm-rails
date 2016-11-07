@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'cssm-rails/version'
+require 'cssm/rails/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'cssm-rails'
-  spec.version       = CSSMRails::VERSION
+  spec.version       = CSSM::Rails::VERSION
   spec.authors       = ['Tomas Celizna']
   spec.email         = ['mail@tomascelizna.com']
 

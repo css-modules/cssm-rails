@@ -1,17 +1,16 @@
 require 'test_helper'
 
-describe CSSMRails::Processor do
-  let(:dir) { Pathname(__FILE__).dirname }
-  let(:filename) { '../samples/test.css' }
-  let(:path) { dir.join(filename) }
-  let(:css) { path.read }
+describe CSSM::Rails::Processor do
+  let(:filename) { 'test.css' }
+  let(:path) { File.join(SAMPLE_DIR, filename) }
+  let(:css) { File.read(path) }
 
   it 'process CSS' do
-    CSSMRails.process(css, from: path).must_be_kind_of CSSMRails::Result
+    CSSM::Rails.process(css, from: path).must_be_kind_of CSSM::Rails::Result
   end
 
   describe 'Result' do
-    let(:result) { CSSMRails.process(css, from: path) }
+    let(:result) { CSSM::Rails.process(css, from: path) }
 
     describe 'global by default' do
       let(:filename) { '../samples/default.css' }
