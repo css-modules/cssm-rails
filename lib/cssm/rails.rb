@@ -24,6 +24,7 @@ module CSSM
   end
 end
 
+require_relative 'rails/asset'
 require_relative 'rails/processor'
 require_relative 'rails/result'
 require_relative 'rails/view_helper'

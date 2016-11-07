@@ -1,14 +1,13 @@
 module CSSM
   module Rails
     module ViewHelper
-      # TODO: Rails.cache.fetch?
-      # we'd need asset difest not only of the file but of all files referred using `composes`
       def cssm(asset_name, cls)
-        @cssm ||= {}
-        @cssm[asset_name] ||= {}
-        @cssm[asset_name][cls] ||= begin
-          path = find_asset(asset_name)
-          CSSM::Rails.process(File.read(path), from: path).export_tokens[cls.to_s] || cls
+        asset = cssm_asset(asset_name)
+        cache_key = ['cssm', asset.digest, cls].join('-')
+
+        ::Rails.cache.fetch(cache_key) do
+          result = CSSM::Rails.process(asset.css, from: asset.path)
+          result.export_tokens.fetch(cls.to_s, cls)
         end
       end
 
@@ -18,14 +17,9 @@ module CSSM
 
       private
 
-      def find_asset(asset_name)
-        asset_paths.flat_map do |path|
-          Dir.glob("#{path}/#{asset_name}.{css,sass,scss}")
-        end.first
-      end
-
-      def asset_paths
-        @asset_paths ||= ::Rails.application.config.assets.paths
+      def cssm_asset(asset_name)
+        @cssm_asset ||= {}
+        @cssm_asset[asset_name] ||= Asset.new(asset_name)
       end
     end
   end
