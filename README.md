@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/tomasc/cssm-rails.svg)](https://travis-ci.org/tomasc/cssm-rails) [![Gem Version](https://badge.fury.io/rb/cssm-rails.svg)](http://badge.fury.io/rb/cssm-rails)
 
+A Rails (Sprockets) wrapped on CSS Modules (respective the [CSS Module Loader Core](https://github.com/css-modules/css-modules-loader-core)).
+It is a minimal and straightforward implementation at the moment (for example calling `node` command directly via command-line). Pull requests are more than welcome!!!
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -72,8 +75,8 @@ cssms('event', 'title') # => '.event_title_HASH.common_bg_HASH'
 
 These are helpful to generate module classes in views:
 
-```erb
-<p class="<%= cssm 'event', 'title' %>">
+```ruby
+<p class="<%= cssm 'event', 'title' %>"> # => <p class="event_title_HASH common_bg_HASH">
   event title
 </p>
 ```
