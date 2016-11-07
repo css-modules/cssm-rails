@@ -7,7 +7,7 @@ module CSSM
 
       def path
         @path ||= paths.flat_map do |path|
-          Dir.glob("#{path}/#{name}.{#{extensions.join(',')}}")
+          Dir.glob("#{path}/**/#{name}.{#{extensions.join(',')}}")
         end.first
       end
 

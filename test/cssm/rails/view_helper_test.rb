@@ -15,4 +15,8 @@ describe CSSM::Rails::ViewHelper, :capybara do
     it { page.must_have_selector '.default' }
     it { page.must_have_selector cssms('default', 'default') }
   end
+
+  describe 'nested' do
+    it { page.must_have_selector cssms('test', 'heading') }
+  end
 end
