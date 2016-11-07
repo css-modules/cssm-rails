@@ -1,10 +1,15 @@
 sudo: false
 language: ruby
 script: 'bundle exec rake'
+
 rvm:
   - 2.2.5
+env:
+  - TRAVIS_NODE_VERSION='6'
+
 before_install:
   - gem install bundler -v 1.12.5
+
 notifications:
   email:
     recipients:
