@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['mail@tomascelizna.com']
 
   spec.summary       = 'CSS Modules for Rails'
-  spec.description   = 'A CSS Module is a CSS file in which all class names and animation names are scoped locally by default. All URLs (url(...)) and @imports are in module request format (./xxx and ../xxx means relative, xxx and xxx/yyy means in modules folder, i. e. in node_modules).'
+  spec.description   = 'A CSS Module is a CSS file in which class names and animation names are scoped locally.'
   spec.homepage      = 'https://github.com/css-modules/cssm-rails'
   spec.license       = 'MIT'
 

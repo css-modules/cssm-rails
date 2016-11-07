@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.org/tomasc/cssm-rails.svg)](https://travis-ci.org/tomasc/cssm-rails) [![Gem Version](https://badge.fury.io/rb/cssm-rails.svg)](http://badge.fury.io/rb/cssm-rails)
 
-A Rails (Sprockets) wrapped on CSS Modules (respective the [CSS Module Loader Core](https://github.com/css-modules/css-modules-loader-core)).
-It is a minimal and straightforward implementation at the moment (for example calling `node` command directly via command-line). Pull requests are more than welcome!!!
+A Rails (Sprockets) wrapper on CSS Modules (respective the [CSS Module Loader Core](https://github.com/css-modules/css-modules-loader-core)).
+It is a minimal and slightly naïve implementation at the moment (for example calling `node` command directly via command-line). Pull requests are more than welcome!!!
 
 ## Installation
 
