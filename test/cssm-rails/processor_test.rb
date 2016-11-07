@@ -26,7 +26,7 @@ describe CSSMRails::Processor do
 
     describe 'cross-file composes: directive' do
       it 'generates export tokens' do
-        result.export_tokens['heading'].must_equal('test_heading_BTR6p common_bold_3qU0f')
+        result.export_tokens['heading'].must_equal('test_heading_BTR6p common_bold_1msV9')
       end
     end
   end

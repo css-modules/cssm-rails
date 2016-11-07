@@ -8,7 +8,7 @@ describe CSSMRails::ViewHelper, :capybara do
   end
 
   describe '.scssm' do
-    it { page.must_have_selector '.'+cssm('event', :title) }
+    it { page.must_have_selector cssms('event', :title) }
   end
 
   describe '.css' do

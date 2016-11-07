@@ -1,13 +1,13 @@
-.background {
+:local(.background) {
   background: yellow;
 }
 
-.title {
+:local(.title) {
   composes: background;
   color: red;
 }
 
-.heading {
+:local(.heading) {
   composes: bold from './common.css';
   color: pink;
 }

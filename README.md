@@ -28,9 +28,7 @@ This gem requires Node to be installed.
 
 ## Usage
 
-### Stylesheets
-
-The deault CSS modules plugins are `postcss-modules-extract-imports`, `postcss-modules-scope`, `postcss-modules-values`. All CSS is global by default, so that the CSS Modules won't affect the current CSS.
+The default CSS modules plugins are `postcss-modules-extract-imports`, `postcss-modules-scope`, `postcss-modules-values`. All CSS is global by default, so that the CSS Modules won't affect the current CSS.
 A good idea might be to later implement new extensions (`.css.m`, `.sass.m`, `.scss.m` for example) whose content would be local by default.
 
 ```css
@@ -47,23 +45,43 @@ A good idea might be to later implement new extensions (`.css.m`, `.sass.m`, `.s
 :local(.title) {
   composes: bg from './common.css';
   /* this class will be transformed to `.event_title_HASH`,
-  the outcome of the `cssm` helper will be `event_title_HASH common_bg_HASH`
+  the outcome of the `cssm` helper will then be `event_title_HASH common_bg_HASH`
   */
 }
 ```
 
-### Javascript
+### Helpers
 
-```js
-// my.js.erb
+The `cssm` helper outputs css module classes:
 
-$("<%= cssm 'foo', 'bar' %>");
+```ruby
+cssm(file_name, class_name)
 ```
 
-### Views
+For example:
+
+```ruby
+cssm('event', 'title') # => 'event_title_HASH common_bg_HASH'
+```
+
+The `cssms` outputs class selector:
+
+```ruby
+cssms('event', 'title') # => '.event_title_HASH.common_bg_HASH'
+```
+
+These are helpful to generate module classes in views:
 
 ```erb
-<p class="<%= cssm 'foo', 'bar' %>">paragraph</p>
+<p class="<%= cssm 'event', 'title' %>">
+  event title
+</p>
+```
+
+And selectors in JS:
+
+```js
+$("<%= cssms 'event', 'title' %>"); // => $('.event_title_HASH.common_bg_HASH')
 ```
 
 ## Development

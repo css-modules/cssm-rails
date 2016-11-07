@@ -3,9 +3,13 @@ module CSSMRails
     def cssm(asset_name, cls)
       # TODO: shall we calculate digest of that file?
       # Rails.cache.fetch(['cssm-rails', asset_name, cls].map(&:to_s).join('-')) do
-        path = find_asset(asset_name)
-        CSSMRails.process(File.read(path), from: path).export_tokens[cls.to_s]
+      path = find_asset(asset_name)
+      CSSMRails.process(File.read(path), from: path).export_tokens[cls.to_s]
       # end
+    end
+
+    def cssms(asset_name, cls)
+      cssm(asset_name, cls).split(/\s+/).map { |i| ".#{i}" }.join
     end
 
     private
