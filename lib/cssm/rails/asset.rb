@@ -22,7 +22,7 @@ module CSSM
       private
 
       def extensions
-        options.fetch :extensions, %w(css sass scss)
+        options.fetch :extensions, %w(cssm sassm scssm)
       end
 
       def paths

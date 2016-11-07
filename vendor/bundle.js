@@ -17,7 +17,8 @@ module.exports = function(css, pathName) {
   Core.scope.generateScopedName = genericNames(template, { context: process.cwd() })
 
   var trace = 0;
-  var core = new Core([values, extractImports, scope])
+  // var core = new Core([values, extractImports, scope]);
+  var core = new Core();
 
   function pathFetcher(file, relativeTo, depTrace) {
     file = file.replace(/^["']|["']$/g, "")

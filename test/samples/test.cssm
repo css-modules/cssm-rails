@@ -1,0 +1,13 @@
+.background {
+  background: yellow;
+}
+
+.title {
+  composes: background;
+  color: red;
+}
+
+.heading {
+  composes: bold from './common.cssm';
+  color: pink;
+}

@@ -31,22 +31,18 @@ This gem requires Node to be installed.
 
 ## Usage
 
-The default CSS modules plugins are `postcss-modules-extract-imports`, `postcss-modules-scope`, `postcss-modules-values`. All CSS is global by default, so that the CSS Modules won't affect the current CSS.
-A good idea might be to later implement new extensions (`.css.m`, `.sass.m`, `.scss.m` for example) whose content would be local by default.
+Files with `*.cssm`, `*.sassm`, `*.scssm` will be processed for CSS modules.
+Files with `*.css`, `*.sass`, `*.scss` extensions will remain unchanged.
 
 ```css
-.default { /* this class will stay untouched */ };
+/* common.cssm */
+.bg { /* this class will be transformed to `.common_bg_HASH` */ };
 ```
 
 ```css
-/* common.css */
-:local(.bg) { /* this class will be transformed to `.common_bg_HASH` */ };
-```
-
-```css
-/* event.css */
-:local(.title) {
-  composes: bg from './common.css';
+/* event.cssm */
+.title {
+  composes: bg from './common.cssm';
   /* this class will be transformed to `.event_title_HASH`,
   the outcome of the `cssm` helper will then be `event_title_HASH common_bg_HASH`
   */
