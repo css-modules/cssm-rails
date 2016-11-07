@@ -1,6 +1,11 @@
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.postcss_modules = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var Core = require('css-modules-loader-core');
 var genericNames = require('generic-names')
+
+var extractImports = require('postcss-modules-extract-imports');
+var scope = require('postcss-modules-scope');
+var values = require('postcss-modules-values');
+
 var fs = require('fs');
 var path = require('path');
 var glob = require('glob');
@@ -12,7 +17,7 @@ module.exports = function(css, pathName) {
   Core.scope.generateScopedName = genericNames(template, { context: process.cwd() })
 
   var trace = 0;
-  var core = new Core()
+  var core = new Core([values, extractImports, scope])
 
   function pathFetcher(file, relativeTo, depTrace) {
     file = file.replace(/^["']|["']$/g, "")
@@ -51,7 +56,7 @@ module.exports(args[0], args[1]).then(
   }
 )
 
-},{"css-modules-loader-core":6,"generic-names":16,"glob":18,"path":undefined}],2:[function(require,module,exports){
+},{"css-modules-loader-core":6,"generic-names":16,"glob":18,"path":undefined,"postcss-modules-extract-imports":29,"postcss-modules-scope":31,"postcss-modules-values":32}],2:[function(require,module,exports){
 module.exports = balanced;
 function balanced(a, b, str) {
   if (a instanceof RegExp) a = maybeMatch(a, str);

@@ -30,8 +30,26 @@ This gem requires Node to be installed.
 
 ### Stylesheets
 
+The deault CSS modules plugins are `postcss-modules-extract-imports`, `postcss-modules-scope`, `postcss-modules-values`. All CSS is global by default, so that the CSS Modules won't affect the current CSS.
+A good idea might be to later implement new extensions (`.css.m`, `.sass.m`, `.scss.m` for example) whose content would be local by default.
+
 ```css
-/*  */
+.default { /* this class will stay untouched */ };
+```
+
+```css
+/* common.css */
+:local(.bg) { /* this class will be transformed to `.common_bg_HASH` */ };
+```
+
+```css
+/* event.css */
+:local(.title) {
+  composes: bg from './common.css';
+  /* this class will be transformed to `.event_title_HASH`,
+  the outcome of the `cssm` helper will be `event_title_HASH common_bg_HASH`
+  */
+}
 ```
 
 ### Javascript
@@ -39,7 +57,7 @@ This gem requires Node to be installed.
 ```js
 // my.js.erb
 
-$(".<%= cssm 'foo', 'bar' %>")
+$("<%= cssm 'foo', 'bar' %>");
 ```
 
 ### Views

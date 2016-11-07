@@ -1,5 +1,10 @@
 var Core = require('css-modules-loader-core');
 var genericNames = require('generic-names')
+
+var extractImports = require('postcss-modules-extract-imports');
+var scope = require('postcss-modules-scope');
+var values = require('postcss-modules-values');
+
 // var fs = require('fs');
 var path = require('path');
 var glob = require('glob');
@@ -11,7 +16,7 @@ module.exports = function(css, pathName) {
   Core.scope.generateScopedName = genericNames(template, { context: process.cwd() })
 
   var trace = 0;
-  var core = new Core()
+  var core = new Core([values, extractImports, scope])
 
   function pathFetcher(file, relativeTo, depTrace) {
     file = file.replace(/^["']|["']$/g, "")
