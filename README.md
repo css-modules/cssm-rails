@@ -3,7 +3,9 @@
 [![Build Status](https://travis-ci.org/tomasc/cssm-rails.svg)](https://travis-ci.org/tomasc/cssm-rails) [![Gem Version](https://badge.fury.io/rb/cssm-rails.svg)](http://badge.fury.io/rb/cssm-rails)
 
 A Rails (Sprockets) wrapper on CSS Modules (respective the [CSS Module Loader Core](https://github.com/css-modules/css-modules-loader-core)).
-It is a minimal and slightly naïve implementation at the moment (for example calling `node` command directly via command-line). Pull requests are more than welcome!!!
+It is a minimal and slightly naïve implementation at the moment (for example calling `node` command directly via command-line). Pull requests are more than welcome.
+
+**A current drawback of an implementation of CSS Modules in Rails is, that it makes views dependent on stylesheets. Currently there is no way how to include digests of relevant stylesheet files with Rails partial digests. This in turn renders this solution unusable in connection with so called russian-doll-caching, since changes to stylesheet assets won't bust the view cache.**
 
 ## Installation
 
