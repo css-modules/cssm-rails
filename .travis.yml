@@ -1,0 +1,21 @@
+sudo: false
+language: ruby
+script: 'bundle exec rake'
+
+rvm:
+  - 2.2.5
+
+env:
+  - TRAVIS_NODE_VERSION='6.8.1'
+
+before_install:
+  - gem install bundler -v 1.12.5
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
+  - npm install
+
+notifications:
+  email:
+    recipients:
+      - mail@tomascelizna.com
+    on_failure: change
+    on_success: never

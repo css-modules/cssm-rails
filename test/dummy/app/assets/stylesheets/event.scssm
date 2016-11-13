@@ -1,0 +1,4 @@
+.title {
+  composes: bg from './common.scssm';
+  font-weight: bold;
+}

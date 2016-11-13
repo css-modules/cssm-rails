@@ -3,3 +3,7 @@
 /doc/
 /pkg/
 /tmp/
+/test/dummy/tmp/
+/test/dummy/log/
+node_modules
+*.log

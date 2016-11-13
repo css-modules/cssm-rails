@@ -1,2 +1,1 @@
-module CSSM
-end
+require_relative 'rails/rails'

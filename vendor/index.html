@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Test that the CSSM bundle works in the browser</title>
+  </head>
+  <body>
+    <script src="bundle.js"></script>
+    <script>
+      var source = ".title { color: red; }"
+      postcss_modules(source, 'inline.css').then(function(res) { console.log(res); });
+    </script>
+  </body>
+</html>
